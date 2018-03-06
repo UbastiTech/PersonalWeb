@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Ubasti Web Tech | Review</title>
+<link rel = "icon" href = "ubastilogo.ico" type = "image/x-icon">
 	<style>
 		.frm2 {
 		font-family:verdana;width:65%;margin-left:20%;border:2px #ccc solid;height:auto;border-radius:10px;
@@ -35,10 +37,6 @@
 				margin-left:40%;
 			}
 		}
-		@media screen and (max-width:801px)
-		{
-		.client_form {margin-top:-380px;}
-		}
 		#submit_btn2 {
 				margin-left:35%;
 			}
@@ -66,6 +64,12 @@
 				font-size:13px;
 			}
 		}
+		@media screen and (max-width:401px)
+		{
+			.emailaddress, .user_review {
+				font-size:13px;
+			}
+		}
 		@media screen and  (max-width:301px)
 		{
 			#titular2 h5 {
@@ -79,7 +83,7 @@
 </head>
 <body>
 <div class = "client_form frm2">
-	<form class = "your_form" method = "post" action = "data.php">
+	<form class = "your_form" method = "post" action = "https://formspree.io/ubastiwebtech@gmail.com" id = "yourform">
 	  <div class = "form_content cntnt2">
 		<div id = "titular2"><h5>How user-friendly is Ubasti Web Tech? Always pleased to hear your feedback!</h5></div>
 				<div class = "textular"><p>Enter a valid email address</p>&emsp;&emsp;&emsp;<input required type = "text" name = "email" placeholder = " email@domain.ext" class = "emailaddress"></br></br></div>
@@ -92,12 +96,29 @@
 						<a class = "ion-android-star b5">
 					</div>
 				</div>
-				<div class = "reviewtext review2">
+				<div class = "reviewtext review2"></br></br>
 					&emsp;&emsp;&emsp;<textarea id = "msg_box" required name = "clientreview" placeholder = " Write a review..." class = "user_review" rows = "8"></textarea></br></br>
 				</div>
-				<input type = "submit" id = "submit_btn2" name = "btn2" value = "OK!"></br></br>
+				<input type = "submit" id = "submit_btn2" name = "submit" value = "OK!"></br></br>
 	  </div>
 	</form>
+	
+	<script type = "text/javascript">
+		$('#yourform').submit(function(e) {
+			
+			$.ajax({ 
+				url: "https://formspree.io/ubastiwebtech@gmail.com",
+				method:"POST",
+				data: $(this).serialize();
+				dataType: "json"
+			});
+			
+				e.preventDefault();
+				$(this).get(0).reset()
+				alertify.success ('Successfully sent to ubastiwebdev@gmail.com');
+		})
+	</script>
+	
   </div>
 </body>
 </html>
