@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>SlideBg</title>
+<style>
+slider {
+
+}
+.imageslide {
+margin-left:70px;
+list-style-type:none;
+display:inline-block;
+}
+ul {
+display:inline;
+}
+.background {
+height:450px;
+width:70%;
+overflow:hidden;
+}
+.background img {
+transition:transform.5s ease-in-out;
+}
+.background img:hover {
+transform: translate3d(-1000px, 0px, 100px);
+}
+</style>
+</head>
+<body>
+<div class = "background" id = "background">
+<ul class = "slider">
+<li class = "imageslide" id = "imgslider" style = "transition:all 0.5s"><img src = "travel3.jpg"></li>
+<li class = "imageslide" id = "imgslider" style = "transition:all 0.5s"><img src = "office.jpg"></li>
+<li class = "imageslide" id = "imgslider" style = "transition:all 0.5s"><img src = "home2.jpg"></li>
+</ul>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("imageslide");
+    var dots = document.getElementsByClassName("imageslide");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 1000); 
+}
+</script>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>...
+</body>
+</html>

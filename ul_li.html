@@ -1,0 +1,27 @@
+<?php
+if (isset ($_POST["btn1"])) 
+{
+  if ($_POST["webtype"] == "blog") {
+	$webtype = "blog";
+  }
+  else if ($_POST["webtype"] == "corporate") {
+	$webtype = "blog";
+  }
+  else {
+	$webtype = "org";
+  }
+  if ($_POST["webprice"] == "tenK") {
+	$webtype = "10K";
+  }
+  else if ($_POST["webprice"] == "fifty_ninetyK") {
+	$webtype = "50-90K";
+  }
+  else {
+	$webtype = "hunK";
+  }
+	$connection=mysqli_connect("localhost", "root", "", "project");
+	$webtype = ;
+	$webprice = ;
+	mysqli_query($connection, "insert into client (Email, Type, Text, Time, Template) values('$_POST[email]', '[webtype]', '[webprice]','$_POST[user_templateText]')");
+}
+?>

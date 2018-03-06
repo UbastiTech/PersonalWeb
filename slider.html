@@ -1,0 +1,82 @@
+<html>
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Automatic Slider CSS Only</title>
+
+    <link rel="stylesheet" tyle="text/css" href="style.css">
+
+  </head>
+  <style>
+*{
+  margin: 0;
+}
+
+@keyframes slider {
+  0%{
+    left: 0;
+  }
+  20%{
+    left: 0;
+  }
+  25%{
+    left: -100%;
+  }
+  45%{
+    left: -100%;
+  }
+  50%{
+    left: -200%;
+  }
+  70%{
+    left: -200%;
+  }
+  75%{
+    left: -300%;
+  }
+  95%{
+    left: -300%;
+  }
+  100%{
+    left: -400%;
+  }
+}
+
+#slider{
+  overflow: hidden;
+}
+
+#slider figure img{
+  width: 20%;
+  float: left;
+}
+
+#slider figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+</style>
+  <body>
+
+    <div id="slider">
+
+      <figure>
+
+        <img src="travel3.jpg">
+		<img src="travel2.jpg">
+		<img src="home2.jpg">
+		<img src="office.jpg">
+		<img src="home.jpg">
+
+      </figure>
+
+    </div>
+
+  </body>
+
+</html>

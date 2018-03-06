@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Slider 2</title>
+<style style="text/css">
+div.slide-slow {
+  width:100%;
+  height:300px;
+  overflow:hidden;
+}
+div.slide-slow div.inner {
+  animation: slide-slow 10s;
+  margin-top:0%;
+}
+div.slide-slow div.inner:after {
+display:none;
+}
+@keyframes slide-slow {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+.inner img {
+padding:20px;
+display:block;
+}
+.inner {
+height:80px;
+}
+</style>
+</head>
+<body>
+<div class="slide-slow">
+<div class="inner">
+	<img src="webdevimg.jpg" width="100%" height="450">
+</div>
+</div>
+</body>
+</html>
+
+
+

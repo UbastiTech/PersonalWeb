@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Opaque</title>
+<style>
+
+</style>
+<script>
+	function myFunction() {
+		var x = document.getElementById("myDiv");
+		if (x.style.opacity === "0") {
+			x.style.opacity = "1";
+		}
+		else {
+			x.style.opacity = "0";
+		}
+	}
+</script>
+</head>
+<body>
+	<button onclick ="myFunction()">Click</button>
+	<div id ="myDiv" style = "transition:all 1s;">This is my div element</div>
+</body>
+</html>

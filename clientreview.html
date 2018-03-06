@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.frm2 {
+		font-family:verdana;width:65%;margin-left:20%;border:2px #ccc solid;height:auto;border-radius:10px;
+		}
+		#submit_btn2 {
+			margin-left:50%;width:100px;height:40px;cursor:pointer;background:#ccc;border:#ccc 1px solid;border-radius:5px;color:blue;font-size:17px;
+		}
+		#submit_btn2:hover {
+			font-size:23px;
+		}
+		#titular2  {
+		margin-top:50px;
+		}
+		#titular2 h5 {
+			font-size:30px;font-family:verdana;color:orange;font-weight:500;padding:0px 30px 0 10px;
+		}
+		.your_form {
+			margin-left:4%;
+		}
+		#msg_box {
+			resize:none;
+		}
+		.emailaddress {
+			height:40px;
+		}
+		.emailaddress, .user_review {
+		border-radius:7px;border:1px #999 solid;font-size:16px;font-family:arial;width:80%;margin-left:-20px;
+		}
+		@media screen and  (max-width:901px)
+		{
+			#submit_btn2 {
+				margin-left:40%;
+			}
+		}
+		@media screen and (max-width:801px)
+		{
+		.client_form {margin-top:-380px;}
+		}
+		#submit_btn2 {
+				margin-left:35%;
+			}
+		@media screen and (max-width:631px)
+		{
+			.client_form {
+			margin-top:10%;width:87%;margin-left:6%;
+			}
+			#titular2 h5 {
+				font-size:20px;
+			}
+		}
+		@media screen and  (max-width:629px)
+		{
+			#titular2 h5 {
+				font-size:17px;
+			}
+		}
+		@media screen and  (max-width:461px)
+		{
+			#titular2 h5 {
+				font-size:15px;
+			}
+			.textular p {
+				font-size:13px;
+			}
+		}
+		@media screen and  (max-width:301px)
+		{
+			#titular2 h5 {
+				font-size:13px;
+			}
+			#submit_btn2 {
+				margin-left:31%;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class = "client_form frm2">
+	<form class = "your_form" method = "post" action = "data.php">
+	  <div class = "form_content cntnt2">
+		<div id = "titular2"><h5>How user-friendly is Ubasti Web Tech? Always pleased to hear your feedback!</h5></div>
+				<div class = "textular"><p>Enter a valid email address</p>&emsp;&emsp;&emsp;<input required type = "text" name = "email" placeholder = " email@domain.ext" class = "emailaddress"></br></br></div>
+				<div class = "starRate">
+					<div class = "box">
+						<a class = "ion-android-star b1">
+						<a class = "ion-android-star b2">
+						<a class = "ion-android-star b3">
+						<a class = "ion-android-star b4">
+						<a class = "ion-android-star b5">
+					</div>
+				</div>
+				<div class = "reviewtext review2">
+					&emsp;&emsp;&emsp;<textarea id = "msg_box" required name = "clientreview" placeholder = " Write a review..." class = "user_review" rows = "8"></textarea></br></br>
+				</div>
+				<input type = "submit" id = "submit_btn2" name = "btn2" value = "OK!"></br></br>
+	  </div>
+	</form>
+  </div>
+</body>
+</html>

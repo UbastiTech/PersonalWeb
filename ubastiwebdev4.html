@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta name = "viewport" charset = "utf-8" content = "width = device-width;height=device-height; initial-scale=1.0">
+<title>Ubasti Web Dev | Home</title>
+<header style = "width:100%;">
+<div id = "header_content" name = "header_content_01" style = "7px solid; width:100%;height:120px;border-bottom:#555 3px solid;">
+    <h1 style = "color:#fff;text-align:center;font-size:220%;margin-top:3%;font-family:arial;"><em>< Ubasti Web Development /></em></h1>
+	<div id = "list">
+	<ul class  = "list">
+		<li class = "active"><button class = "homepage"><p style = "font-size:22px;font-family:arial;font-weight:bold;color:brown;"><em>Home</em></p></button></li>
+		<li class = "inactive"><a href = "#" class = "contacts" style = "font-size:22px;font-family:arial;font-weight:bold;text-decoration:underline;color:#444;"><em>Contact Us</em></p></a></li>
+	</ul>
+	</div>
+	<div id = "order">
+	<button id  = "myBtn"><em>Place an order for your website!</em></button>
+	</div>
+</div>
+<div id  = "myModal" class = "modal">
+		  <div class = "modal_content">
+		    <span class = "close">&times;</span>
+			  <table>
+			  <tr>
+			    <td>
+				  <b><h4 style = "color:#000;">Please enter a valid email address:</h4></b>
+				</td>
+				<td>
+				  <input type = "text" class  = "clientemail" required pattern='^[@.A-Za-z0-9 ]+' style = "width:130%;text-align:center;margin-left:15px;" name  = "user_email">
+				</td>
+			  </tr>
+			  </table>
+			  <h3>Please Select:</h3>
+			    <h4 style = "color:#000;">Type Of Website</h4>
+				<div class = "slide-slow">
+				<div class = "inner">
+				 <ul>
+				  <li style = "list-style-type:none;"><input type = "radio" class = "clienttype" name = "webtype">&emsp;Personal</li>
+				  <li style = "list-style-type:none;"><input type = "radio" class = "clienttype" name = "webtype">&emsp;Corporate</li>
+				  <li style = "list-style-type:none;"><input type = "radio" class = "clienttype" name = "webtype">&emsp;Organization</li>
+				 </ul>
+				 </div>
+				 </div>
+				 <table>
+			  <tr>
+			    <td>
+				  <b><h4 style = "color:#000;">Duration</h4></b>
+				</td>
+				<td>
+				  <input type = "text" name = "client_email"class  = "clientemail" required pattern='^[A-Za-z0-9 ]+' style = "width:65%;margin-left:56%;" placeholder = "Enter timeline (eg, 4 months)">
+				</td>
+			  </tr>
+			  </table>
+			  <p>If you have a template or an idea of how you wish your website to look,</br> kindly add them in the dialog box below</p>
+			  <textarea style = "height:100px;width:90%;font-family:vedana;font-size:20px;" name = "user_template"></textarea>
+			<button class  = "submit" style = "float:right; height:27px;margin-top:90px;margin-right:-11px;font-size:13px;" onclick = "##">Submit</button></br>
+		  </div>
+		</div>
+<script>
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	} 
+</script>
+</header>
+<style>
+body, html {
+margin:0;
+padding:0;
+}
+#header_content {
+position:fixed;
+width:100%;
+background:blue;
+margin-top:-125px;
+}
+#list ul {
+list-style-type:none;
+margin-top:-40px;
+}
+#list li {
+display:inline;
+padding:20px;
+}
+.list li {
+display:inline;
+}
+.active {
+color:brown;
+}
+.inactive {
+text-decoration:underline;
+color:#777;
+}
+.inactive:hover{
+color:#fff;
+}
+.homepage {
+background-color:transparent;
+border-color:transparent;
+}
+.contacts {
+background-color:transparent;
+border-color:transparent;
+}
+#order {
+float:right;
+margin-right:40px;
+margin-top:-119px;
+}
+#myBtn {
+background-color:brown;
+color:#fff;
+height:27%;
+border-color:transparent;
+width:100%;
+font-size:17px;
+border-radius:5%;
+}
+#myBtn:hover {
+color:light-brown;
+}
+.more {
+color:black;
+}
+.modal {
+display:none;
+position:fixed;
+z-index:1;
+left:0;
+top:0;
+right:0;
+bottom:0;
+width:900px;
+height:850px
+border:2px #000 solid
+overflow:auto;
+margin-top:-200px;
+margin-left:-190px;
+opacity:0.96;
+}
+.modal_content {
+background-color:#fefefe;
+padding:20px;
+margin-left:50%;
+margin-top:30%;
+border:1px solid #888;
+width:80%;
+}
+.close {
+color:#fff;
+float:right;
+font-size:28px;
+font-weight:bold;
+margin-top:-27px;
+margin-right:-4px;
+background:red; 
+transform:rotate(-90deg);
+}
+.close:hover,
+.close:focus {
+color:fff;
+text-decoration:none;
+cursor:pointer;
+background:red;
+}
+div.slide-slow div.inner {
+  animation: slide-slow 0.2s;
+  margin-top:0%;
+}
+div.slide-slow div.inner:after {
+display:none;
+}
+@keyframes slide-slow {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 5%;
+  }
+}
+#intro {
+margin-top:125px;
+background:skyblue;
+text-align:center;
+height:90px;
+}
+</style>
+</head>
+<body>
+	<div id = "intro">
+		<h5 style = "color:brown;font-size:29px;"><em>Welcome to Ubasti, the one stop online shop for your website needs and requirements.</em></h5>
+	</div>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang = "en">
+<meta charset = "utf-8" name = "viewport" content = "width=device-width, intial-scale = 1.0">
+<head>
+<title>DIFEP.ORG</title>
+<style>
+		* {
+			margin:0;
+			padding:0;
+		}
+		@keyframes slide {
+			0% {
+				left:0;
+			}
+			10% {
+				left:0;
+			}
+			20% {
+				left:-100%;
+			}
+			30% {
+				left:-100%;
+			}
+			40% {
+				left:-200%;
+			}
+			50% {
+				left:-200%;
+			}
+			60% {
+				left:-300%;
+			}
+			70% {
+				left:-300%;
+			}
+			80% {
+				left:-400%;
+			}
+			90% {
+				left:-400%;
+			}
+			100% {
+				left:0;
+			}
+		}
+		#slider {
+			overflow:hidden;
+			width:71.8%;
+		}
+		#slider figure img {
+			float:left;
+			width:20%;
+			height:500px;
+		}
+		#slider figure {
+			position:relative;
+			width:500%;
+			animation:slide 10s infinite;
+		}
+		#header1 h2 {
+			font-size:50px;font-weight:500;color:blue;margin-top:11px;text-align:center;
+		}
+		#links ul{
+			list-style-type:none;float:right;background:#ccc;height:50px;margin-top:-500px;width:29%;
+		}
+		#links li {
+			padding:24px;display:inline;margin-top:20px;
+		}
+		#links a {
+			text-decoration:none;font-size:21px;color:green;
+		}
+		#links a:hover {
+			color:orange;text-decoration:underline;
+		}
+		#combine {
+			margin-top:30px;
+		}
+		#team {
+			float:right;margin:0 4%;margin-top:-410px;
+		}
+		#team h4 {
+			font-size:27px;color:skyblue;
+		}
+		#team img {
+			height:200px;width:200px;margin-left:27px;
+		}
+		#team p {
+			font-family:Calibri;font-size:22px;opacity:0.7;text-align:center;
+		}
+		.member_contact {
+			width:100px;font-size:20px;color:#fff;background:#555;border:#555 1px solid;height:40px;cursor:pointer;margin-left:30%;
+		}
+		.member_contact:hover {
+			color:yellow;
+		}
+		#links2, #seconddisplay {display:none;}
+@media screen and (max-width:1233px)
+{
+	#links li {
+		padding:22px;
+	}
+}
+@media screen and (max-width:1211px)
+{
+	#team img {
+		height:180px;width:180px;
+	}
+	#slider {
+		width:70%;
+	}
+	#links ul {
+		width:30%;
+	}
+}
+@media screen and (max-width:1191px)
+{
+	#links li {
+		padding:20px;
+	}
+}
+@media screen and (max-width:1149px)
+{
+	#links li {
+		padding:19px;
+	}
+}
+@media screen and (max-width:1127px)
+{
+	#links li {
+		padding:18px;
+	}
+}
+@media screen and (max-width:1121px)
+{
+	#slider {
+		width:70%;
+	}
+	#slider figure img {
+		height:400px;
+	}
+	#links  {
+		margin-top:100px;
+	}
+}
+@media screen and (max-width:1111px)
+{
+	#header1 h2 {
+		font-size:40px;
+	}
+}
+@media screen and (max-width:1071px)
+{
+	#links li {
+		padding:17px;
+	}
+}
+@media screen and (max-width:1051px)
+{
+	#links li {
+		padding:16px;
+	}
+}
+@media screen and (max-width:1031px)
+{
+	#links li {
+		padding:15px;
+	}
+}
+@media screen and (max-width:1011px)
+{
+	#links li {
+		padding:14px;
+	}
+}
+@media screen and (max-width:1071px)
+{
+	#slider {
+		width:65%;
+	}
+	#links ul {
+		width:35%;
+	}
+	#links li {
+		padding:22px;
+	}
+}
+@media screen and (max-width:987px)
+{
+	#links li {
+		padding:20px;
+	}
+}
+@media screen and (max-width:953px)
+{
+	#links li {
+		padding:19px;
+	}
+}
+@media screen and (max-width:935px)
+{
+	#links li {
+		padding:18px;
+	}
+}
+@media screen and (max-width:919px)
+{
+	#links li {
+		padding:17px;
+	}
+}
+@media screen and (max-width:901px)
+{
+	#slider {
+			width:63%;
+	}
+	#links ul {
+		width:37%;
+	}
+	#links li {
+		padding:19px;
+	}
+	#slider figure img {
+		height:300px;
+	}
+	#links {
+		margin-top:200px;
+	}
+	#team img {
+		width:150px;height:150px;margin-left:20%;
+	}
+}
+@media screen and (max-width:885px)
+{
+	#links li {
+		padding:18px;
+	}
+}
+@media screen and (max-width:871px)
+{
+	#links li {
+		padding:17px;
+	}
+}
+@media screen and (max-width:853px)
+{
+	#links li {
+		padding:16px;
+	}
+}
+@media screen and (max-width:835px)
+{
+	#links li {
+		padding:15px;
+	}
+}
+@media screen and (max-width:819px)
+{
+	#links li {
+		padding:14px;
+	}
+}
+@media screen and (max-width:803px)
+{
+	#slider {
+		width:60%;
+	}
+	#links {
+		margin-top:220px;
+	}
+	#links ul {
+		width:40%;
+	}
+	#links li {
+		padding:17px;
+	}
+	#slider figure img {
+		height:280px;
+	}
+}
+@media screen and (max-width:791px)
+{
+	#links li {
+		padding:16px;
+	}
+}
+@media screen and (max-width:773px)
+{
+	#links a {
+		font-size:20px;
+	}
+}
+@media screen and (max-width:727px)
+{
+	#slider {
+		width:80%;
+		margin-left:10%;margin-top:20px;
+	}
+	#slider figure img {
+		height:340px;
+	}
+	#seconddisplay {display:inline-block;}
+	#links, #team {display:none;}
+	#links2 {display:none;margin-top:5px;margin-left:110px;}
+	#links2 ul {list-style-type:none;margin:-50px 20px 10px 0;width:13%;height:75px;}
+	#links2 a {text-decoration:none;color:green;font-size:18px;border-bottom:#eee 2px solid;}
+	#links2 li {padding:2px;margin:5px 0 5px 0;}
+	#links2 a:hover {
+		color:orange;
+	}
+	.menubuttonclass {
+		background:orange;
+		border:orange 1px solid;
+		margin-left:11px;
+		cursor:pointer;
+		padding:2px 4px;
+		color:#fff;
+		font-weight:bold;
+		border-radius:5px;
+	}
+	.hidebuttonclass {
+		display:none;
+	}
+	body {
+		background:lightblue;
+	}
+
+}
+</style>
+<header id = "header1">
+	<h2>Divine Favour Empowerment Programme</h2>
+</header>
+<div id = "combine">
+<div id = "seconddisplay">
+  <div id = "menuoption" class = "menubar"><input type = "submit" name = "menubutton" class = "menubuttonclass" id = "menubuttonclass" value = "Show Menu"></div>
+  <div id = "menuoption2" class = "menubar"><input type = "submit" name = "menubutton" class = "menubuttonclass hidebuttonclass" id = "menubuttonclass2" value = "Hide Menu"></div>
+	<div id = "links2">
+	<ul>
+			<li><a href = "#" onclick = "return false">Home</a></li>
+			<li><a href = "#">Services</a></li>
+			<li><a href = "#" class = "contactlink">Contacts</a></li>
+		</ul>
+	</div>
+	<script type = "text/javascript">
+		var menu = document.getElementById('links2');
+		var menubutton = document.getElementById("menubuttonclass");
+		var hidebutton = document.getElementById("menubuttonclass2");
+		
+		menubutton.onclick = function() {
+			menu.style.display = "block";
+			menubutton.style.display = "none";
+			hidebutton.style.display = "block";
+		}
+		hidebutton.onclick = function() {
+			menu.style.display = "none";
+			hidebutton.style.display = "none";
+			menubutton.style.display = "block";
+		}
+	</script>
+</div>
+<div id = "slider">
+		<figure>
+			<img src = "travel3.jpg">
+			<img src = "home2.jpg">
+			<img src = "office.jpg">
+			<img src = "home.jpg">
+			<img src = "travel2.jpg">
+		</figure>
+</div>
+<div id = "links">
+		<ul>
+			<li><a href = "#" onclick = "return false">Home</a></li>
+			<li><a href = "#">Services</a></li>
+			<li><a href = "#">Contacts</a></li>
+		</ul>
+</div>
+	<div id = "team">
+			<h4>Meet the DIFEP staff</h4></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Mary M. Watari</p><p class = "member_position">Director</p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Lucy Wanjiku</p><p class = "member_position">Secretary</p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Annah M. Njambi</p><p class = "member_position">Treasurer</p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name"> >Blank< </p><p class = "member_position"> >Blank< </p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Claud K. Watari</p><p class = "member_position">I.C.T</p><a href = "new-er.html" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Claude N. Mwangi</p><p class = "member_position">Food Production</p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Lukas Kamwaro</p><p class = "member_position">Youth Affairs</p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Emmanuel Melita</p><p class = "member_position"> >Blank <</p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br></br>
+			<img src = "user.jpg" class = "member_photo"><p class = "member_name">Chrispus K. Ledama</p><p class = "member_position">Animal Health</p><a href = "#" class = "contact_link"><button name = "contact_button" class = "member_contact">Contact</button></a></br></br>.
+	</div>
+</div>
+</head>
+<body>
+	<div id = "continer">
+	
+	</div>
+	<div id = "body_content">
+	
+	</div>
+	</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>...
+</body>
+</html>

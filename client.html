@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ubasti Web Tech | Contact</title>
+  <style>
+  * {
+		margin:0;
+		padding:0;
+	}
+	#titular  {
+		text-align:center;margin-top:50px;
+	}
+	#titular h5 {
+		font-size:30px;font-family:verdana;color:orange;font-weight:500;padding:0px 15px;
+	}
+	#textular {
+		text-align:center;color:#2c8a93;;margin-top:100px;
+	}
+	#textular p {
+		font-family:verdana;font-size:20px;padding:0px 9px;
+	}
+	#client_form {
+		margin-top:70px;font-family:verdana;width:65%;margin-left:30%;border:2px #ccc solid;height:auto;border-radius:10px;
+	}
+	#your_form {
+		margin-left:10%;opacity:0.7;
+	}
+	.user_timeline {
+		width:50%;height:40px;border-radius:7px;border:1px #999 solid;font-size:16px;font-family:arial;
+	}
+	.userTemplate, .user_orgInfo {
+		border-radius:7px;border:1px #999 solid;font-size:16px;font-family:arial;width:50%;
+	}
+	.copy {
+		text-align:center;font-family:verdana;font-size:13px;
+	}
+	#submit_btn {
+		margin-left:50%;width:100px;height:40px;cursor:pointer;background:#ccc;border:#ccc 1px solid;border-radius:5px;color:blue;font-size:17px;
+	}
+	.ExtSocial {
+		text-decoration:none;background:#ccc;
+	}
+	#social {
+		width:24%;font-family:verdana;margin-left:11px;position:fixed;margin-top:-90px;
+	}
+	.extMedia {
+		padding:10px;
+	}
+	.SocialBtn {
+		height:60px;width:220px;background:#ccc;border:#ccc 1px solid;border-radius:5px;cursor:pointer;
+	}
+	.fb {
+		color:blue;
+	}
+	.twitter {
+		color:#2c8a93;
+	}
+	.linkedin, .email, .phone {
+		color:#444;
+	}
+	.fb, .twitter, .linkedin, .email, .phone {
+		font-size:17px;
+	}
+	#social2, #social3, #social4 {
+		display:none;
+	}
+	.opT {margin-left:20%;}
+	@media screen and (max-width:10000px)
+	{
+		#client_form{margin-left:20%;}
+	}
+	@media screen and (max-width:1401px)
+	{
+		#client_form{margin-left:30%;}
+		#textular p {margin-left:29%;}
+	}
+	@media screen and (max-width:1265px)
+	{
+		#textular p {margin-left:29%;}
+	}
+	@media screen and (max-width:942px)
+	{
+		.SocialBtn {
+			height:49px;
+		}
+		#textular p{
+			margin-left:29%;
+		}
+	}
+	@media screen and (max-width:839px)
+	{
+		.SocialBtn {width:200px;}
+	}
+	@media screen and (max-width:783px)
+	{
+		.SocialBtn {width:150px;}
+		.fb, .twitter, .linkedin, .email, .phone {
+			font-size:15px;
+		}
+	}
+	@media screen and (max-width:631px)
+	{
+		#textular p{
+			margin-left:0px;
+		}
+		.SocialBtn2 {
+			height:40px;width:100px;background:#ccc;border:#ccc 1px solid;border-radius:7px;cursor:pointer;
+		}
+		.fb, .twitter, .linkedin, .email, .phone {
+			font-size:11px;
+		}
+		#social, #social3, #social4 {
+			display:none;
+		}
+		#client_form {
+			margin-top:10%;width:87%;margin-left:6%;
+		}
+		#social2 {
+			display:inline-block;margin-left:20px;margin-top:30px;
+		}
+		#social2 li {
+			display:inline;
+			width:100px;height:20px;
+			padding:4px;
+		}
+		#social2 a {
+			text-decoration:none;
+			border-radius:7px;
+		}
+		.fb2 { color:blue;}
+		.twitter2 {color:#2c8a93;}
+		.linkedin2, .phone2, .email2 {color:#444;}
+		.userTemplate, .user_orgInfo, .user_timeline {
+			width:90%;
+		}
+		#submit_btn {
+			margin-left:38%;
+		}
+		.opT {margin-left:20%;}
+	}
+	@media screen and (max-width:611px)
+	{
+		#social2 li {
+			padding:2px;
+		}
+	}
+	@media screen and (max-width:591px)
+	{
+		.SocialBtn2 {
+			height:34px;width:96px;
+		}
+	}
+	@media screen and (max-width:555px)
+	{
+		#social2 {display:none;}
+		#social3 {display:inline-block;margin-top:30px;margin-left:8%;width:90%;}
+		.SocialBtn3 {
+			height:40px;width:78px;background:#ccc;border:#ccc 1px solid;border-radius:7px;cursor:pointer;
+		}
+		.fb3 { color:blue;}
+		.twitter3 {color:#2c8a93;}
+		.linkedin3, .phone3, .email3 {color:#444;}
+		#social3 li {
+			display:inline;
+			width:100px;height:20px;
+			padding:4px;
+		}
+	}
+	@media screen and (max-width:523px)
+	{
+		#social3 li { padding:2px;}
+	}
+	@media screen and (max-width:517px)
+	{
+		#social3 li {
+			padding:2px;
+		}
+		#social3 {
+			margin-left:7%;
+		}
+	}
+	@media screen and (max-width:501px)
+	{
+		.opT {margin-left:10%;}
+		#submit_btn {
+			margin-left:34%;
+		}
+		#social3 li {
+			padding:1px;
+		}
+	}
+	@media screen and (max-width:489px)
+	{
+		.SocialBtn3 {width:78px;}
+	}
+	@media screen and (max-width:485px)
+	{
+		#social3 {
+			display:none;
+		}
+		#social4 {display:inline-block;margin-top:30px;}
+		.SocialBtn4 {height:40px;width:80 px;background:#ccc;border:#ccc 1px solid;border-radius:7px;cursor:pointer;}
+		#social4 li {
+			display:inline;
+			width:100px;height:20px;
+			padding:4px;
+		}
+		.fb4 { color:blue;}
+		.twitter4 {color:#2c8a93;}
+		.linkedin4, .phone4, .email4 {color:#444;}
+	}
+	@media screen and (max-width:475px)
+	{
+		 #social4 {width:100%;}
+	}
+	@media screen and (max-width:471px)
+	{
+		.SocialBtn4 {width:81px;}
+	}
+	@media screen and (max-width:461px)
+	{ 
+		.SocialBtn4 {width:80px;}
+	}
+	@media screen and (max-width:455px)
+	{
+		.SocialBtn4 {width:17%;}
+		 #social4{width:91%;margin-left:6%;}
+		 .user_timeline {font-size:14px;}
+	}
+	{
+		.opT {margin-left:4%;}
+		#submit_btn {
+			margin-left:30%;
+		}
+	}
+	@media screen and (max-width:409px)
+	{
+		 #social4{margin-left:8%;}
+		 .SocialBtn4 {width:16%;}
+		 .user_timeline {font-size:13px;}
+	}
+	@media screen and (max-width:391px)
+	{
+		 #social4{display:none;}
+		 #social3 {display:inline-block;}
+		 .SocialBtn3 {width:90%;margin-top:9px;}
+		 .fb3, .twitter3, .linkedin3, .email3, .phone3 {font-size:15px;}
+	}
+	@media screen and (max-width:363px)
+	{
+		.user_timeline {font-size:11px;}
+	}
+	@media screen and (max-width:335px)
+	{
+		.opT {margin-left:0px;}
+		#submit_btn {
+			margin-left:28%;
+		}
+	}
+	@media screen and (max-width:307px)
+	{
+		.opT {font-size:13px;font-family:verdana;}
+		#submit_btn {
+			margin-left:24%;
+		}
+	}
+	@media screen and (max-width:299px)
+	{
+		#titular h5 {padding:0px 4px;}
+	}
+  </style>
+</head>
+<body>
+  <div id = "titular">
+	<h5>Wanna get a brand new, fresh, online face for your business??</h5>
+  </div>
+  <div id = "textular">
+	<p>Just fill in your details in the form below!</br>That Easy</p>
+  </div>
+  <div id = "social">
+	<div class = "extMedia">
+		<a href = "http://www.facebook.com/ubastiwebdev" class = "ExtSocial fb"><button class = "SocialBtn fb">Connect with Ubasti On Facebook</button></a>
+	</div>
+	<div class = "extMedia">
+		<a href = "http://www.twitter.com/ubastiwebdev" class = "ExtSocial twitter"><button class = "SocialBtn twitter">Follow Ubasti On Twitter</button></a>
+	</div>
+	<div class = "extMedia">
+		<a href = "http://www.linkedin.com/ubastiwebdev" class = "ExtSocial linkedin"><button class = "SocialBtn linkedin">Follow Ubasti On LinkedIn</button></a>
+	</div>
+	<div class = "extMedia">
+		<a href = "email#" class = "ExtSocial email"><button class = "SocialBtn email">Send an Email</button></a>
+	</div>
+	<div class = "extMedia">
+		<a href = "phone#" class = "ExtSocial phone"><button class = "SocialBtn phone">Make Phone Call</button></a>
+	</div>
+  </div>
+  <div id = "client_form">
+	<form id = "your_form" method = "post" action = "data.php">
+	  <div class = "form_content">
+		</br><p>What is your type of website? (Click the appropriate checkbox)</p></br>
+		  <div class = "opT">
+			<option>
+				<input type = "radio" class = "choice1">&emsp;Personal / Blog</br></br>
+				<input type = "radio" class = "choice1">&emsp;Corporate</br></br>
+				<input type = "radio" class = "choice1">&emsp;Organization</br></br>
+			</option>
+		  </div>
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<textarea class = "user_orgInfo" placeholder = "Say Something about your organization to help understand what your website is all about" name = "orgInfo" rows = "8" required></textarea></br></br>
+			<p>What is your timeline?? By what time do you expect your website to be available??</p></br>
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type = "text" name = "user_time" placeholder = " Enter timeline / duration... (Eg 4 months)" required class = "user_timeline"></br></br>
+			<p>What is your pricing range??</p></br>
+			<div class = "opT">
+			<option>
+				<input type = "radio" class = "choice2">&emsp;KShs 100,000 and above</br></br>
+				<input type = "radio" class = "choice2">&emsp;KShs 50,000 - 90,000</br></br>
+				<input type = "radio" class = "choice2">&emsp;KShs 10,000 - 49,000</br></br>
+			</option>
+			</div>
+			<p>Do you have an idea / template for how you wish your webiste to look like?</p></br>
+			<p>If yes, write to Ubasti.</p></br>
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<textarea name = "user_templateText" placeholder = " Write your desired template here..." class = "userTemplate" rows = "8"></textarea></br></br>
+			<input type = "submit" id = "submit_btn" name = "btn1" value = "OK!"></br></br>
+	  </div>
+	</form>
+  </div>
+  <div id = "social2">
+	<ul>
+		<li><a href = "facebook.com"><input class = "SocialBtn2 fb2" type = "submit" value  = "Facebook"></a></li>
+		<li><a href = "twitter.com"><input  class = "SocialBtn2 twitter2" type = "submit" value  = "Twitter"></a></li>
+		<li><a href = "linkedin.com"><input  class = "SocialBtn2 linkedin2" type = "submit" value  = "LinkedIn"></a></li>
+		<li><a href = "email#.com"><input  class = "SocialBtn2 email2" type = "submit" value  = "ubastiwebtech@gmail.com"></a></li>
+		<li><a href = "phone#.com"><input  class = "SocialBtn2 phone2" type = "submit" value  = "+254 705 724562"></a></li>
+	</ul>
+  </div>
+  <div id = "social3">
+	<ul>
+		<li><a href = "facebook.com"><button  class = "SocialBtn3 fb3">Connect on Facebook</button></a></li>
+		<li><a href = "twitter.com"><button  class = "SocialBtn3 twitter3">Follow on Twitter</button></a></li>
+		<li><a href = "linkedin.com"><button  class = "SocialBtn3 linkedin3">Follow on LinkedIn</button></a></li>
+		<li><a href = "email#.com"><button  class = "SocialBtn3 email3">ubastiwebtech @gmail.com</button></a></li>
+		<li><a href = "phone#.com"><button class = "SocialBtn3 phone3">+254 705 724562</button></a></li>
+	</ul>
+  </div>
+  <div id = "social4">
+	<ul>
+		<li><a href = "facebook.com"><button  class = "SocialBtn4 fb4">Facebook</button></a></li>
+		<li><a href = "twitter.com"><button  class = "SocialBtn4 twitter4">Twitter</button></a></li>
+		<li><a href = "linkedin.com"><button  class = "SocialBtn4 linkedin4">LinkedIn</button></a></li>
+		<li><a href = "email#.com"><button  class = "SocialBtn4 email4">ubastiwebtech @gmail.com</button></a></li>
+		<li><a href = "phone#.com"><button class = "SocialBtn4 phone4">+254 705 724562</button></a></li>
+	</ul>
+  </div>
+  </br></br></br><p class = "copy">&copy;Copyright Ubasti Tech, 2018</p></br>
+</body>
+</html>
