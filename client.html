@@ -30,7 +30,7 @@
 	.user_timeline {
 		width:50%;height:40px;border-radius:7px;border:1px #999 solid;font-size:16px;font-family:arial;
 	}
-	.userTemplate, .user_orgInfo {
+	.userTemplate, .user_orgInfo, .email {
 		border-radius:7px;border:1px #999 solid;font-size:16px;font-family:arial;width:50%;
 	}
 	.copy {
@@ -132,7 +132,7 @@
 		.fb2 { color:blue;}
 		.twitter2 {color:#2c8a93;}
 		.linkedin2, .phone2, .email2 {color:#444;}
-		.userTemplate, .user_orgInfo, .user_timeline {
+		.userTemplate, .user_orgInfo, .user_timeline, .email {
 			width:90%;
 		}
 		#submit_btn {
@@ -235,7 +235,7 @@
 		.SocialBtn4 {width:17%;}
 		 #social4{width:91%;margin-left:6%;}
 		 .user_timeline {font-size:14px;}
-		 .user_orgInfo, .userTemplate {font-size:13px;}
+		 .user_orgInfo, .userTemplate, .email {font-size:13px;}
 	}
 	{
 		.opT {margin-left:4%;}
@@ -298,7 +298,7 @@
 			margin-left:28%;
 		}
 		.fb3, .twitter3, .linkedin3, .email3, .phone3 {font-size:13px;}
-		.user_orgInfo, .userTemplate {font-size:11px;}
+		.user_orgInfo, .userTemplate, .email {font-size:11px;}
 	}
 	@media screen and (max-width:307px)
 	{
@@ -342,6 +342,7 @@
   <div id = "client_form">
 	<form id = "your_form" method = "post" action = "https://formspree.io/ubastiwebtech@gmail.com">
 	  <div class = "form_content">
+		  <p>Enter a valid email address</p><input type = "text" required class = "email"> 
 		</br><p>What is your type of website? (Click the appropriate checkbox)</p></br>
 		  <div class = "opT">
 				<input type = "radio" class = "choice1">&emsp;Personal / Blog</br></br>
