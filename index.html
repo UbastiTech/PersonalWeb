@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Watari Claud Kamau 95</title>
+<link rel = "icon" href = "" type = "image/x-icon">
+<header>
+	<input class = "welcomeheader" type = "submit" value = "Welcome to my website">
+	<div class = "download">
+	  <a href = "claudwatari-cv.docx" download>
+		<button class = "cvdownload" value = "Download My CV" name = "cvdownload" id = "downloadcv"><span class = "hideonhover">Download My CV</span><span class = "showonhover">Download Now</span></button>
+	  </a>
+	</div>
+</header>
+<style>
+		
+	* {
+		margin:0;padding:0;
+		font-family:sans-serif;
+		background:lightblue;
+	}
+	.welcomeheader {
+		margin-left:30%;
+		font-size:40px;
+		border:#777 9px solid;
+		padding:10px 20px;
+		border-radius:15px;
+		margin-top:17px;
+	}
+	#body_content {
+		opacity:0.9;
+	}
+	.showlater, .slider, #links {
+		display:none;
+	}
+	.intro_p, .container p  {
+		margin-top:40px;text-align:center;margin-bottom:-30px;
+	}
+	.container h5 {
+		font-size:20px;font-weight:bold;margin-left:4%;margin-top:5%;display:none;
+	}
+	.content h5 {
+		font-size:20px;font-weight:bold;margin-left:4%;margin-top:4%;
+	}
+	.container ul {
+		margin-left:7%;display:none;
+	}
+	.content ul {
+		margin-left:7%;
+	}
+	.container li {
+		padding-top:1%;color:blue;
+	}
+	.content li {
+		padding-top:1%;color:blue;
+	}
+	.project {
+		float:right;
+		margin-right:20px;margin-top:-15%;
+		font-size:20px;
+	}
+	.project p {font-weight:700;}
+	.thumbnail {font-size:13px;margin-left:27%;}
+	.cvdownload {
+		background:green;border:green 1px solid;color:#fff;padding:7px 15px;font-size:13px;border-radius:5px;float:right;font-weight:600;
+		margin-right:50px;margin-top:-50px;cursor:pointer;
+	}
+	.showonhover {display:none;background:green;}
+	.hideonhover {background:green;}
+	.cvdownload:hover .showonhover{
+		display:inline-block;font-size:13.2px;width:108px;font-weight:600;color:#fff000;
+	}
+	.cvdownload:hover .hideonhover {
+		display:none;
+	}
+	.mypic {width:33%;height:540px;border-radius:20px;}
+	.bclass {background:lightgreen;border-radius:20px;padding:10px 20px;}
+	.photoslider {border-top:2px orange solid;padding-top:3%;border-bottom:2px orange solid;padding-bottom:3%;padding-right:2%;padding-left:2%;}
+	.a-image{width:150px;height:150px;margin-top:20px;margin-left:30%;margin-bottom:10%;}
+	.linktext {
+		margin-left:-15%;margin-top:60px;font-size:29px;position:absolute;opacity:0;color:#444;
+	}
+	.other_q {cursor:pointer;text-decoration:underline;color:#666;font-family:arial;}
+	.aboutme {margin-left:7%;margin-top:4%;}
+	.myinterests{margin-top:auto;text-align:center;margin-left:20%;width:50%;border:1px solid #555;height:70%;overflow:auto;display:none;z-index:9;position:absolute;margin-top:-40%;}
+	.myinterests ul {list-style-type:none;font-size:13px;}
+	.myinterests li{padding:40px;border-top:orange 1px solid;width:70%;margin-left:9%;margin-right:9%;margin-bottom:10px;}
+	.myinterests h5 {color:purple;font-size:17px;margin-top:4%;}
+	.interestsimage {height:70px;width:70px;float:left;padding:10px;}
+	.myinterests p {margin-top:20px;}
+	.info {border:1px #555 solid;}
+	.close{float:right;position:sticky;cursor:pointer;margin-top:;%;margin-right:5px;padding:5px 8px;font-size:11px;}
+	.a-image2 {display:none;}
+	
+.slider {
+  max-width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  //position: relative;
+  overflow:hidden;
+}
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  position: absolute;
+  width: 80%;
+  margin-left:10%;
+  height: 300px;
+}
+.slide1 {
+  background-image: url("claudbackgroundimage.jpg");
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+
+} 
+.slide2 {
+ background-image: url("claudbgimg.png");
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background-image: url("selfiebg.jpg");
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+#mypic {
+	position:relative;z-index:2;
+}
+.modal {
+	display:none;position:absolute;
+}
+.smallmodal {
+	border:1px solid black;
+	width:78%;
+	margin-left:20px;
+	font-size:12px;
+	padding:15px 10px 15px 20px;
+	z-index:3;
+	height:135px;overflow:auto;
+	background:#fff;
+	//opacity:0.8;
+	position:relative;
+}
+.smallmodal p {
+	background:#fff;
+}
+.portfoliomodal {
+	width:120%;
+	background:#fff;
+}
+.mycontactsmodal {
+	width:105%;
+	background:#fff;
+}
+.mycontactsmodal a {
+	background:#fff;
+}
+.A, .B, .C, .D {
+	background:#fff;
+}
+.C .thumbnail {
+	background:#fff;
+}
+.C .extlink {
+	background:#fff;
+}
+.C a {
+	background:#fff;
+}
+.C img {
+	background:#fff;margin-left:21%;
+}
+.classp {
+	border-top:2px solid gold;
+	padding-top:10px;
+	width:94%;
+}
+.c-class {
+	display:inline;padding:5px 10px;
+	background:#fff;
+	border-radius:10px;
+	opacity:0.9;
+}
+.mail {
+	text-decoration:none;
+}
+.c-class:hover {
+	color:#2c8a93;background:#eee;
+}
+.mycontacts { margin-left:34%;margin-top:7%; }
+.mycontacts li {list-style-type:none;display:inline;padding:10px;}
+	@media screen and (max-width:4000px)
+	{
+		.myinterests {
+			margin-top:-400px;
+		}
+	}
+	@media screen and (max-width:2000px)
+	{
+		.mypic {
+			height:820px;
+		}
+		.linktext {
+			margin-left:-9.5%;
+		}
+	}
+	@media screen and (max-width:1950px)
+	{
+		.mypic {
+			height:800px;
+		}
+		.linktext {
+			margin-left:-9.8%;
+		}
+	}
+	@media screen and (max-width:1900px)
+	{
+		.mypic {
+			height:780px;
+		}
+		.linktext {
+			margin-left:-10.1%;
+		}
+	}
+	@media screen and (max-width:1850px)
+	{
+		.mypic {
+			height:760px;
+		}
+		.linktext {
+			margin-left:-10.4%;
+		}
+	}
+	@media screen and (max-width:1800px)
+	{
+		.mypic {
+			height:740px;
+		}
+		.linktext {
+			margin-left:-10.7%;
+		}
+	}
+	@media screen and (max-width:1750px)
+	{
+		.mypic {
+			height:720px;
+		}
+		.linktext {
+			margin-left:-11%;
+		}
+	}
+	@media screen and (max-width:1700px)
+	{
+		.mypic {
+			height:700px;
+		}
+		.linktext {
+			margin-left:-11.2%;
+		}
+	}
+	@media screen and (max-width:1650px)
+	{
+		.mypic {
+			height:680px;
+		}
+		.linktext {
+			margin-left:-11.5%;
+		}
+	}
+	@media screen and (max-width:1600px)
+	{
+		.mypic {
+			height:660px;
+		}
+		.linktext {
+			margin-left:-11.9%;
+		}
+	}
+	@media screen and (max-width:1540px)
+	{
+		.mypic {
+			height:640px;
+		}
+		.linktext {
+			margin-left:-12.3%;
+		}
+	}
+	@media screen and (max-width:1500px)
+	{
+		.mypic {
+			height:620px;
+		}
+		.linktext {
+			margin-left:-12.6%;
+		}
+	}
+	@media screen and (max-width:1460px)
+	{
+		.linktext {
+			margin-left:-12.8%;
+		}
+	}
+	@media screen and (max-width:1421px)
+	{
+		.mypic {
+			height:590px;
+		}
+		.linktext {
+			margin-left:-13.5%;
+		}
+	}
+	@media screen and (max-width:1400px)
+	{
+		.mypic {
+			height:570px;
+		}
+		.linktext {
+			margin-left:-13.8%;
+		}
+	}
+	@media screen and (max-width:1364px)
+	{
+		.linktext {
+			margin-left:-14%;
+		}
+	}
+	@media screen and (max-width:1334px)
+	{
+		.linktext {
+			margin-left:-14.3%;
+		}
+	}
+	@media screen and (max-width:1301px)
+	{
+		.linktext {
+			margin-left:-14.6%;
+		}
+	}
+	@media screen and (max-width:1274px)
+	{
+		.linktext {
+			margin-left:-15%;
+		}
+		.project p {
+			font-size:17px;
+		}
+	}
+	@media screen and (max-width:1267px)
+	{
+		.thumbnail {
+			margin-left:25%;
+		}
+	}
+	@media screen and (max-width:1235px)
+	{
+		.linktext {
+			margin-left:-15.2%;
+		}
+	}
+	@media screen and (max-width:1225px)
+	{
+		.linktext {
+			margin-left:-15.4%;
+		}
+	}
+	@media screen and (max-width:1207px)
+	{
+		.linktext {
+			margin-left:-15.6%;
+		}
+	}
+	@media screen and (max-width:1203px)
+	{
+		.myinterests h5 {
+			margin-left:70px;
+		}
+	}
+	@media screen and (max-width:1187px)
+	{
+		.linktext {
+			margin-left:-15.8%;
+		}
+	}
+	@media screen and (max-width:1183px)
+	{
+		.mypic {
+			height:510px;
+		}
+		.content li {
+			font-size:15px;
+		}
+		.myinterests li {
+			width:68%;
+		}
+	}
+	@media screen and (max-width:1171px)
+	{
+		.linktext {
+			margin-left:-15.5%;font-size:27px;
+		}
+	}
+	@media screen and (max-width:1161px)
+	{
+		.linktext {
+			margin-left:-16%;
+		}
+		.a-image {
+			margin-left:29%;
+		}
+	}
+	@media screen and (max-width:1151px)
+	{
+		.linktext {
+			margin-left:-16.2%;
+		}
+	}
+	@media screen and (max-width:1147px)
+	{
+		.mycontacts ul {
+			margin-left:-5%;
+		}
+	}
+	@media screen and (max-width:1141px)
+	{
+		.mypic {
+			height:470px;
+		}
+		.linktext {
+			margin-left:-16.6%;
+		}
+		.welcomeheader {
+			margin-left:29%;
+		}
+	}
+	@media screen and (max-width:1121px)
+	{
+		.linktext {
+			margin-left:-16.8%;
+		}
+		.project p {
+			font-size:16px;
+		}
+		.content li {
+			font-size:14px;
+		}
+		.welcomeheader {
+			margin-left:28%;
+		}
+		.a-image {
+			margin-left:28%;
+		}
+	}
+	@media screen and (max-width:1079px)
+	{
+		.welcomeheader {
+			margin-left:27%;
+		}
+	}
+	@media screen and (max-width:1071px)
+	{
+		.mypic {
+			height:460px;
+		}
+		.linktext {
+			margin-left:-17.4%;
+		}
+	}
+	@media screen and (max-width:1063px)
+	{
+		.mycontacts ul {
+			margin-left:-10%;
+		}
+	}
+	@media screen and (max-width:1054px;)
+	{
+		.myinterests li {
+			width:66%;
+		}
+	}
+	@media screen and (max-width:1051px)
+	{
+		.linktext {
+			margin-left:-16.5%;font-size:24px;
+		}
+		.thumbnail {
+			margin-left:24%;
+		}
+	}
+	@media screen and (max-width:1041px)
+	{
+		.welcomeheader {
+			margin-left:26%;
+		}
+	}
+	@media screen and (max-width:1021px)
+	{
+		.myinterests li {
+			width:65%;
+		}
+	}
+	@media screen and (max-width:1021px)
+	{
+		.project p {
+			font-size:15px;
+		}
+		.content li {
+			font-size:13px;
+		}
+		.linktext {
+			margin-left:-16.8%;
+		}
+		.welcomeheader {
+			margin-left:25%;
+		}
+		.a-image {
+			margin-left:27%;
+		}
+	}
+	@media screen and (max-width:1011px)
+	{
+		.welcomeheader {
+			font-size:35px;
+			margin-left:28%;
+		}
+	}
+	@media screen and (max-width:997px)
+	{
+		.intro_p {
+			font-size:14px;
+		}
+		.more_p {
+			font-size:14px;
+		}
+	}
+	@media screen and (max-width:985px)
+	{
+		margin-left:26%;
+	}
+	@media screen and (max-width:979px)
+	{
+		.content li {
+			font-size:12px;
+		}
+		.project p {
+			font-size:14px;
+		}
+		.welcomeheader {
+			font-size:30px;
+			margin-left:28%;
+		}
+	}
+	@media screen and (max-width:975px)
+	{
+		.mycontacts ul {
+			margin-left:-50px;font-size:13.5px;
+		}
+	}
+	@media screen and (max-width:971px)
+	{
+		.mypic {
+			height:420px;
+		}
+		.mycontacts ul{
+			font-size:13px;
+		}
+	}
+	@media screen and (max-width:965px)
+	{
+		.mypic {
+			width:32.9%;
+		}
+	}
+	@media screen and (max-width:945px)
+	{
+		.cvdownload {
+			font-size:13px;font-weight:700;
+		}
+	}
+	@media screen and (max-width:929px)
+	{
+		.mypic {
+			
+			height:390px;
+		}
+		.bclass {
+			
+		}
+	}
+	@media screen and (max-width:903px)
+	{
+		.project p {
+			font-size:13px;
+		}
+		.a-image, .linktext {display:none;}
+		.a-image2 {
+			display:inline-block;
+			margin-left:28%;
+			height:130px;width:130px;
+			padding-top:10px;
+			padding-bottom:20px;
+		}
+		.thumbnail {
+			font-size:11px;
+		}
+		.myinterests li {
+			width:64%;
+		}
+	}
+	@media screen and (max-width:893px)
+	{
+		.intro_p {
+			font-size:12.5px;
+		}
+		.more_p {
+			font-size:12.5px;
+		}
+		.welcomeheader {
+			font-size:25px;
+			margin-left:30%;
+		}
+	}
+	@media screen and (max-width:875px)
+	{
+		.mypic {
+			height:380px;
+		}
+		.project p {
+			font-size:12px;
+		}
+		.content li{
+			font-size:11.5px;
+		}
+		.aboutme p {
+			font-size:13px;
+		}
+		.aboutme {
+			margin-left:10px;
+		}
+		.a-image2 {
+			margin-left:23%;
+		}
+		.thumbnail {
+			margin-left:20%;
+		}
+	}
+	@media screen and (max-width:851px)
+	{
+		.mypic {
+			height:360px;
+		}
+		.content {
+			width:50%;
+		}
+		.content li {
+			padding-top:10px;
+		}
+		.project {
+			margin-top:-160px;
+		}
+	}
+	@media screen and (max-width:831px)
+	{
+		.myinterests li {
+			width:63%;
+		}
+	}
+	@media screen and (max-width:821px)
+	{
+		.welcomeheader {
+			margin-left:29%;
+		}
+	}
+	@media screen and (max-width:818px)
+	{
+		.mypic {
+			height:350px;
+		}
+	}
+	@media screen and (max-width:801px)
+	{
+		.mypic {
+			height:330px;
+		}
+		.welcomeheader {
+			margin-left:28%;
+		}
+	}
+	@media screen and (max-width:789px)
+	{
+		.welcomeheader {
+			margin-left:25%;
+		}
+		.content li {
+			width:100%;
+		}
+	}
+	@media screen and (max-width:787px)
+	{
+		.mypic {
+			height:310px;
+		}
+	}
+	@media screen and (max-width:771px)
+	{
+		.contents li {
+			width:61%;
+		}
+		.welcomeheader {
+			margin-left:20%;
+		}
+	}
+	@media screen and (max-width:759px)
+	{
+		.myinterests {
+			width:70%;
+			margin-left:10%;
+		}
+		.myinterests li {
+			width:67%;
+		}
+	}
+	@media screen and (max-width:753px)
+	{
+		.mypic {
+			width:32.89%;
+		}
+	}
+	@media screen and (max-width:751px)
+	{
+		.a-image, .linktext {
+			display:none;
+		}
+		.a-image2 {
+			display:inline-block;
+			width:100px;height:100px;
+			padding-bottom:10%;
+			margin-left:30%;
+			padding-top:10%;
+		}
+	}
+	@media screen and (max-width:737px)
+	{
+		.mypic {
+			width:32.84%;
+		}
+	}
+	@media screen and (max-width:735px)
+	{
+		.intro_p {
+			margin-left:20px;margin-right:20px;
+		}
+		.more_p {
+			margin-left:20px;margin-right:20px;
+		}
+	}
+	@media screen and (max-width:725px)
+	{
+		.welcomeheader {
+			margin-left:17%;
+		}
+		.showlater {
+			display:inline-block;
+		}
+		.hidelater {
+			display:none;
+		}
+	}
+	@media screen and (max-width:685px)
+	{
+		.photoslider, .content, .aboutme, .project, .h-class, .mycontacts {
+			display:none;
+		}
+		.slider {
+		  display:inline-block;
+		}
+		.cvdownload {
+			margin-top:500px;position:absolute;z-index:2;margin-left:42%;
+		}
+		.welcomeheader {
+			margin-left:26%;
+		}
+		.intro_p {
+			margin-top:110px;font-size:12px;
+		}
+		.more_p p {
+			font-size:12px;
+		}
+		#links {
+			display:inline-block;
+			margin-top:11%;
+		}
+		.mine {
+			display:block;
+			margin-top:15px;
+			margin-left:20px;
+			cursor:pointer;
+			letter-spacing:1px;
+			width:105px;
+			height:auto;
+			padding:4px 9px;
+			text-align;center;
+			background:black;
+			border:black 1px solid;
+			color:#fff;
+			border-radius:5px;
+			font-weight:700;
+			text-transform:upper-roman;
+		}
+		.smallmodal {
+			width:60%;
+		}
+		.modal {
+			margin-left:20%;
+		}
+		.mycontactsmodal {
+			width:125%;
+		}
+		.portfoliomodal {
+			width:125%;
+		}
+	}
+	@media screen and (max-width:661px)
+	{
+		.welcomeheader {
+			margin-left:25%;
+		}
+	}
+	@media screen and (max-width:657px)
+	{
+		.smallmodal {
+			width:70%;
+			margin-left:-5%;
+		}
+		.mycontactsmodal {
+			width:90%;
+			margin-left:9%;
+		}
+		.portfoliomodal {
+			width:120%;
+			margin-left:9%;
+		}
+	}
+	@media screen and (max-width:637px)
+	{
+		.welcomeheader {
+			margin-left:24%;
+		}
+	}
+	@media screen and (max-width:617px)
+	{
+		.welcomeheader {
+			font-size:23px;
+		}
+	}
+	@media screen and (max-width:597px)
+	{
+		.cvdownload {
+			margin-left:40%;
+		}
+	}
+	@media screen and (max-width:587px)
+	{
+		.welcomeheader {
+			margin-left:23.5%;
+		}
+	}
+	@media screen and (max-width:571px)
+	{
+		.mycontactsmodal {
+			width:90%;
+			margin-left:50px;
+		}
+		.portfoliomodal {
+			width:120%;
+			margin-left:50px;
+		}
+	}
+	@media screen and (max-width:561px)
+	{
+		.welcomeheader {
+			margin-left:23%;
+		}
+		.slide1,.slide2,.slide3,.slide4,.slide5 {
+		    position: absolute;
+		    width: 95%;
+		    margin-left:13px;
+	}
+	@media screen and (max-width:551px)
+	{
+		.welcomeheader {
+			margin-left:22%;
+		}
+		.cvdownload {
+			margin-left:38%;
+		}
+	}
+	@media screen and (max-width:531px)
+	{
+		.welcomeheader {
+			font-size:22px;
+			margin-left:22.5%;
+		}
+	}
+	@media screen and (max-width:509px)
+	{
+		.welcomeheader {
+			font-size:20px;
+		}
+	}
+	@media screen and (max-width:487px)
+	{
+		.welcomeheader {
+			font-size:19px;
+		}
+	}
+	@media screen and (max-width:481px)
+	{
+		.welcomeheader {
+			margin-left:22%;
+		}
+	}
+	@media screen and (max-width:471px)
+	{
+		.slide1,.slide2,.slide3,.slide4,.slide5 {
+		    position: absolute;
+		    width: 94%;
+		    margin-left:13px;
+		}
+		.cvdownload {
+			margin-top:540px;
+		}
+		.mycontactsmodal {
+			width:80%;
+		}
+		.portfoliomodal {
+			width:100%;
+		}
+	}
+	@media screen and (max-width:457px)
+	{
+		.welcomeheader {
+			margin-left:21%;
+		}
+	}
+	@media screen and (max-width:441px)
+	{
+		.welcomeheader {
+			margin-left:20px;width:90%;margin-right:15px;
+		}
+	}
+	@media screen and (max-width:431px)
+	{
+		.mycontactsmodal {
+			width:70%;
+			margin-left:60px;
+		}
+		.portfoliomodal {
+			width:90%;
+			margin-left:60px;
+		}
+	}
+	@media screen and (max-width:409px)
+	{
+		.slide1,.slide2,.slide3,.slide4,.slide5 {
+		    position: absolute;
+		    margin-left:12px;
+		}
+	}
+	@media screen and (max-width:391px)
+	{
+		.slide1,.slide2,.slide3,.slide4,.slide5 {
+			height:250px;
+		}
+		.intro_p {
+			margin-top:56px;
+		}
+		.cvdownload {
+			margin-top:470px;margin-left:35%;
+		}
+		.smallmodal {
+			margin-left:-40px;
+			width:90%;
+		}
+		.mycontactsmodal {
+			width:150%;
+		}
+		.portfoliomodal {
+			width:180%;
+		}
+	}
+	@media screen and (max-width:385px)
+	{
+		.mine {
+			font-size:11px;width:90px;padding:2px 0px;
+		}
+	}
+	@media screen and (max-width:381px)
+	{
+		.slide1,.slide2,.slide3,.slide4,.slide5 {
+		    position: absolute;
+			width:93.5%;
+		    margin-left:12px;
+		}
+	}
+	@media screen and (max-width:371px)
+	{
+		.welcomeheader {
+			margin-left:17px;
+		}
+	}
+	@media screen and (max-width:341px)
+	{
+		.welcomeheader {
+			margin-left:14px;
+		}
+		.slide1,.slide2,.slide3,.slide4,.slide5 {
+			height:200px;
+		}
+		.intro_p {
+			margin-top:10px;
+		}
+		.cvdownload {
+			margin-top:430px;margin-left:33%;
+		}
+	}	
+	@media screen and (max-width:311px)
+	{
+		.slide1,.slide2,.slide3,.slide4,.slide5 {
+		    position: absolute;
+			width:93%;
+		    margin-left:11px;
+		}
+	}
+	@media screen and (max-width:323px)
+	{
+		.cvdownload {
+			margin-top:450px;margin-left:30%;
+		}
+	}
+	@media screen and (max-width:301px)
+	{
+		.welcomeheader {
+			margin-left:14px;
+		}
+	}
+	@media screen and (max-width:291px)
+	{
+		.welcomeheader {
+			margin-left:13px;
+		}
+	}
+	@media screen and (max-width:285px)
+	{
+		.cvdownload {
+			margin-left:28%;
+		}
+	}
+	@media screen and (max-width:281px)
+	{
+		.welcomeheader {
+			margin-left:13px;
+		}
+	}
+</style>
+</head>
+<body>
+
+	<div class="slider">
+	  <div class='slide1'></div>
+	  <div class='slide2'></div>
+	  <div class='slide3'></div>
+	</div>
+	
+	<div id = "body_content">
+	<p class = "intro_p">Hi? My name is Claud and this is my personal space where you will find everything you need to know about me.</p>
+	<div class = "container">
+	<div class = "more_p">
+	<p>I am a web developer / web designer & programmer and also an <span class = "hidelater">Information Technology</span><span class = "showlater">I.T</span> student at a Kenyan University.</p>
+	<p>I write HTML5, CSS3, JavaScript and PHP, with knowledge in MySqli databases.</p>
+	<p>Currently learning C++ and PHP frameworks.</p></br></br>
+	</div>
+	<h5>About me</h5></br>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	
+	<div class = "photoslider">
+		<div class = "bclass" id = "mypic">
+			<img src = "claudbackgroundimage.jpg" class = "mypic">
+			<img src = "claudbgimg.png" class = "mypic">
+			<img src = "selfiebg.jpg" class = "mypic">
+		</div>
+	</div>
+	
+	</div>
+	<div class = "content">
+		<h5>Alumnus</h5>
+		<ul>
+			<li>Naramat Academy in Matasia along the Ngong - Kiserian road (Class of 2008)</li>
+			<li>Br. Beausang Sec. School along Ngong Road (Class of 2013)</li>
+			<li>Technical University of Kenya (CIT Class of 2014)</li>
+			<li>Jomo Kenyatta University of Agriculture & Technology (DIT class of 2015)</li>
+		</ul>
+	</div></br>
+	<div class = "aboutme">
+		<p>You might wonder... <span class = "other_q" id = "oth-q">'What things does Claud like?'</span></p>
+		<p>
+	</div>
+	<div class = "project">
+		<p>Below is a gallery of my personal projects</br><span class = "thumbnail">Just click on the thumbnail</span></p>
+		<div class = "portfolioclass">
+			<a class = "extlink" href = "http://www.ubastiwebtech.com"><img class = "a-image" src = "searchimg.jpg" id = "imagelink"><span class = "linktext" style = "transition: .5s ease-in-out;;" id ="spantext">Ubasti Web Tech</span><script type = "text/javascript">
+	var spantext = document.getElementById('spantext');
+	var btn = document.getElementById("imagelink");
+	btn.onmouseover = function() {
+		spantext.style.opacity = "1",
+		btn.style.width = "160px";
+		btn.style.height = "160px";
+	}
+	spantext.onmouseover = function() {
+		spantext.style.opacity = "1",
+		btn.style.width = "160px";
+		btn.style.height = "160px";
+	}
+	spantext.onmouseleave = function() {
+		spantext.style.opacity = "0";
+		btn.style.width = "150px";
+		btn.style.height = "150px";
+	}
+	btn.onmouseleave = function() {
+		spantext.style.opacity = "0";
+		btn.style.width = "150px";
+		btn.style.height = "150px";
+	}</script></a>
+	<a href = "http://www.ubastiwebtech.com" class = "extlink"><img class = "a-image2" src = "searchimg.jpg" id = "imagelink"></a>
+		</div>
+	</div>
+	<div class = "h-class">
+	<div id = "interests" class = "myinterests"></div">
+	 <div class = "info">
+	 <span class = "close" style = "background:red;color:white;" id = "close">Close</span>
+		<h5 class "titleheading">I have a wide range of interests:</h5></br></br>
+			<ul>
+			  <li style = "background:#eee;">
+				<img style = "background:#eee;" src = "tech.jpg" class = "interestsimage code">
+				<p style = "background:#eee;">Obviously, I have a big passion and interest in technology, sciences and research, especially computer programming and writing codes.</p>
+			  </li>
+			  <li style = "background:#eee;">
+				<img style = "background:#eee;" src = "reading.jpg" class = "interestsimage code">
+				<p style = "background:#eee;">I also love spending time reading exciting novels (especially fiction from sci-fi and drama genres) magazines and motivational books.</br>My favorite book would be 'The River and The Source' by Dr. Margaret A. Ogola, mostly being that it plots around African culture, a theme I have a strong fascination with</p>
+			  </li>
+			  <li style = "background:#eee;">
+				<img style = "background:#eee;" src = "sports.jpg" class = "interestsimage code">
+				<p style = "background:#eee;">I'm also a sucker for extreme sports, with a caveat - I'm not big on water sports, but I would like to try surfing or water boarding. I am more of a skydiving, gliding, motor sports and flying enthusiast.</p>
+			  </li>
+			  <li style = "background:#eee;">
+				<img style = "background:#eee;" src = "music.jpg" class = "interestsimage code">
+				<p style = "background:#eee;">Musically, I am more inclined to the alternative genres, a big metal lover with a zeal for bass guitars especially. (Can't say I have a favorite band now though, haha) and classical music (concertos, operas, the likes) I, however also love other genres, especially hiphop / rap. I am a person with a wide taste for variety, there are no limits.</p>
+			  </li>
+			  <li style = "background:#eee;">
+				<img style = "background:#eee;" src = "partner.jpg" class = "interestsimage code">
+				<p style = "background:#eee;">I also love watching documentaries about business, entrepreneurship, investments etc</p>
+			  </li>
+			</ul>
+	 <div class = "xclass">
+		</br></br><h5 style = "margin-left:0px;">What are my aspirations?</h5></br></br>
+			<ul>
+				<li style = "background:#eee;">The future is now, and as most motivational speakers will say, life is what we make of it. Of course, hurdles are there for all of us, but then again, iron is strengthened by fire, so determination is all that matters. As Grant Cardone says 'Stay optimistic about your future even when others aren't.'</li>
+				<li style = "background:#eee;">All I am focused on now is growing my web creation skills, because in technology, the more you know, the more you don't. The idea is to learn as much as one can, and adapt to fast changing technologies</li>
+			</ul>
+	 </div>
+	 </div>
+	</div>
+	</div>
+	
+	<script type = "text/javascript">
+		var btnspan = document.getElementById("oth-q");
+		var modal5 = document.getElementsByClassName("myinterests")[0];
+		var close = document.getElementById("close");
+		
+		btnspan.onclick = function() {
+			modal5.style.display = "block";
+		}
+		close.onclick = function() {
+			modal5.style.display = "none";
+		}
+	</script>
+	
+<div id = "links">
+	<input type = "submit" id = "frmrbtn" class = "mine alumni" value = "Alumnus"><span class = "modal alumnus" id = "alumnusmodal"><div class = "smallmodal alumnimodal" style = "margin-top:-90px;"><div class = "class A"><span class = "close" style = "background:red;color:white;font-size:17px;height:11px;margin-top:-16px;margin-right:-10px;" id = "close"><p style = "background:red;margin-top:-5.5px;">&times;</p></span></br><p class = "classp">Naramat Academy along the Ngong-Kiserian road in Matasia (class of 2008)</p></br><p class = "classp">Br. Beausang Sec. School along Ngong road (class of 2013)</p></br><p class = "classp">Technical University of Kenya (CIT class of 2014)</p></br><p class = "classp">Jomo Kenyatta University of Agriculture and Technology (DIT class of 2015)</p></br></div></div></span>
+	<script> var modal = document.getElementById("alumnusmodal"); 
+		var buttonone = document.getElementsByClassName("alumni")[0]; 
+		var buttontwo = document.getElementsByClassName("close")[1]; 
+		var cvbutton = document.getElementById("downloadcv");
+		buttonone.onclick = function() { modal.style.display = "block"; cvbutton.style.display = "none"; document.getElementById("intrbtn").disabled = true; document.getElementById("prjbtn").disabled = true;  document.getElementById("cntbtn").disabled = true; } 
+		buttontwo.onclick = function() { modal.style.display = "none"; cvbutton.style.display = "block"; document.getElementById("intrbtn").disabled = false; document.getElementById("prjbtn").disabled = false;  document.getElementById("cntbtn").disabled = false; }
+	</script>
+	<input type = "submit" id = "intrbtn" class = "mine interests" value = "My Interests" id = "interests"><span class = "modal awe" id = "awemodal"><div class = "smallmodal Interestmodal" style = "margin-top:-130px;"><div class = "class B"><span class = "close" style = "background:red;color:white;font-size:17px;height:11px;margin-top:-16px;margin-right:-10px;" id = "close"><p style = "background:red;margin-top:-5.5px;">&times;</p></span></br><p class = "classp">Obviously, I have a big passion and interest in technology, sciences and research, especially computer programming and writing codes.</p></br><p class = "classp">I also love spending time reading exciting novels (especially fiction from sci-fi and drama genres) magazines and motivational books.</br>My favorite book would be 'The River and The Source' by Dr. Margaret A. Ogola, mostly being that it plots around African culture, a theme I have a strong fascination with</p></br><p class = "classp">I'm also a sucker for extreme sports, with a caveat - I'm not big on water sports, but I would like to try surfing or water boarding. I am more of a skydiving, gliding, motor sports and flying enthusiast.</p></br><p class = "classp">Musically, I am more inclined to the alternative genres, a big metal lover with a zeal for bass guitars especially. (Can't say I have a favorite band now though, haha) and classical music (concertos, operas, the likes) I, however also love other genres, especially hiphop / rap. I am a person with a wide taste for variety, there are no limits.</p></br><p class = "classp">I also love watching documentaries about business, entrepreneurship, investments etc</p></div></div></span>
+	<script> 
+		var modal2 = document.getElementById("awemodal"); 
+		var buttonone2 = document.getElementsByClassName("interests")[0]; 
+		var buttontwo2 = document.getElementsByClassName("close")[2];
+		var cvbutton2 = document.getElementById("downloadcv");
+		buttonone2.onclick = function() { modal2.style.display = "block"; cvbutton2.style.display = "none"; document.getElementById("frmrbtn").disabled = true; document.getElementById("prjbtn").disabled = true;  document.getElementById("cntbtn").disabled = true; } 
+		buttontwo2.onclick = function() { modal2.style.display = "none"; cvbutton2.style.display = "block"; document.getElementById("frmrbtn").disabled = false; document.getElementById("prjbtn").disabled = false;  document.getElementById("cntbtn").disabled = false; }
+	</script>
+	<input type = "submit" id = "prjbtn" class = "mine projects" value = "My Projects"><span class = "modal portfolio" id = "projectsmodal"><div class = "smallmodal portfoliomodal" style = "margin-top:-155px;"><div class = "class C"><span class = "close" style = "background:red;color:white;font-size:17px;height:11px;margin-top:-16px;margin-right:-10px;" id = "close"><p style = "background:red;margin-top:-5.5px;">&times;</p></span><span class = "thumbnail">Click on the thumbnail</span></br><a href = "http://www.ubastiwebtech.com" class = "extlink"><img class = "a-image2" src = "searchimg.jpg" id = "imagelink" style = "margin-bottom:0;padding-bottom:0;"></a></div></div></span>
+	<script> 
+		var modal3 = document.getElementById("projectsmodal"); 
+		var buttonone3 = document.getElementsByClassName("projects")[0]; 
+		var buttontwo3 = document.getElementsByClassName("close")[3];
+		var cvbutton3 = document.getElementById("downloadcv");
+		buttonone3.onclick = function() { modal3.style.display = "block"; cvbutton3.style.display = "none"; document.getElementById("frmrbtn").disabled = true; document.getElementById("intrbtn").disabled = true; document.getElementById("cntbtn").disabled = true;} 
+		buttontwo3.onclick = function() { modal3.style.display = "none"; cvbutton3.style.display = "block"; document.getElementById("frmrbtn").disabled = false; document.getElementById("intrbtn").disabled = false; document.getElementById("cntbtn").disabled = false; }
+	</script>
+	<input type = "submit" id = "cntbtn" class = "mine contact" value = "Contacts"><span class = "modal contacts" id = "contactsmodal"><div class = "smallmodal mycontactsmodal" style = "margin-top:-190px;"><div class = "class D"><span class = "close" style = "background:red;color:white;font-size:17px;height:11px;margin-top:-14px;margin-right:-8px;" id = "close"><p style = "background:red;margin-top:-5px;">&times;</p></span><a href = "mailto:claudwatari95@gmail.com" class = "email"></br></br>claudwatari95@gmail.com</a></br></br></br><a class = "phonelink" href = "tel:+254705724562">+254 705 724562</a></div></div></span>	</br></br>
+	<script> 
+		var modal4 = document.getElementById("contactsmodal"); 
+		var buttonone4 = document.getElementsByClassName("contact")[0]; 
+		var buttontwo4 = document.getElementsByClassName("close")[4];
+		var cvbutton4 = document.getElementById("downloadcv");
+		buttonone4.onclick = function() { modal4.style.display = "block"; cvbutton4.style.display = "none";  document.getElementById("frmrbtn").disabled = true; document.getElementById("intrbtn").disabled = true; document.getElementById("prjbtn").disabled = true; } 
+		buttontwo4.onclick = function() { modal4.style.display = "none"; cvbutton4.style.display = "block";  document.getElementById("frmrbtn").disabled = false;  document.getElementById("intrbtn").disabled = false; document.getElementById("prjbtn").disabled = false; }
+	</script>
+</div>
+</div>
+<div class = "mycontacts">
+<ul>
+	<li><p class = "c-class phone">+254 705 724562</p></li>
+	<li><a class = "c-class mail" href = "mailto:claudwatari95@gmail.com">claudwatari95@gmail.com</a></li>
+</ul>
+</div></br>
+</body>
+</html>
